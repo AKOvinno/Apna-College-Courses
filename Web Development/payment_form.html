@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+  </head>
+  <body>
+    <form method="GET" action="">
+      <h1>Payment Forms</h1>
+      <p>Required Fields are followed by *</p>
+      <h2>Contact Information</h2>
+      <p>First Name: * <input type="text" name="fname" required /></p>
+      <p>Last Name: <input type="text" name="lname" required /></p>
+      <fieldset>
+        <legend>Gender *</legend>
+        <p>
+          <!-- Here the name should be same otherwise people can check both box and web browser will get it differently -->
+          <input type="radio" name="gender" id="male" required /> Male <br />
+          <input type="radio" name="gender" id="female" required /> Female
+          <br />
+          <input type="radio" name="gender" id="other" required /> Other
+        </p>
+      </fieldset>
+      <p>
+        Address:
+        <textarea name="address" id="address" cols="100" rows="8"></textarea>
+      </p>
+      <p>Email: * <input type="email" name="email" id="email" required /></p>
+      <p>
+        Pincode: * <input type="number" name="Pincode" id="Pincode" required />
+      </p>
+      <h2>Payment Information</h2>
+      <p>
+        Card Type: *
+        <select name="card_type" id="card_type" required>
+          <option value="">--Select a Card Type--</option>
+          <option value="visa">Visa</option>
+          <option value="master_card">MasterCard</option>
+          <option value="bkash">Bkash</option>
+          <option value="rocket">Rocket</option>
+          <option value="cellfin">Cellfin</option>
+        </select>
+      </p>
+      <p>
+        Card Number: *
+        <input type="number" name="card_number" id="card_number" required />
+      </p>
+      <p>
+        Expiration Date: *
+        <input type="date" name="exp_date" id="exp_date" required />
+      </p>
+      <p>CVV * <input type="password" name="cvv" id="cvv" required /></p>
+      <input type="submit" value="Pay Now" />
+    </form>
+  </body>
+</html>
